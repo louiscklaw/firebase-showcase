@@ -1,0 +1,26 @@
+{
+  "name": "showcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiscklaw/showcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiscklaw/showcase/issues"
+  },
+  "homepage": "https://github.com/louiscklaw/showcase#readme",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}

@@ -1,0 +1,314 @@
+$base-color: #c6538c;
+$default-background-color: #ecf0f1;
+$primary-color: #2c3e50;
+$secondary-color: #c6538c;
+$tertiary-color: #c6538c;
+
+$link-color: #666666;
+$link-hover-color: #666666;
+
+$body-text-color: #515151;
+$body-text-white-color: white;
+$body-text-black-color: black;
+$body-link-color: #1b63f7;
+
+$border-dark: rgba($base-color, 0.88);
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  * {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+  }
+}
+
+// .animate {
+//   transition: 0.2s;
+//   -webkit-transition: 0.2s;
+//   -moz-transition: 0.2s;
+//   -o-transition: 0.2s;
+// }
+
+footer {
+  background-color: white;
+}
+
+p {
+  text-align: justify;
+}
+
+input[type="text"] {
+  font-family: arial;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: #e5e5e5;
+  color: $body-text-color;
+}
+
+input[type="text"]:focus {
+  background-color: black;
+  color: $body-text-white-color;
+}
+
+input[type="text"]::placeholder {
+  color: $body-text-white-color;
+}
+
+input[type="text"]:focus::placeholder {
+  color: $body-text-white-color;
+  opacity: 0.8;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.row-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  transition: all 0.3s ease 0s;
+}
+
+.content a {
+  color: $body-link-color;
+  text-decoration: none;
+  border-bottom: 2px solid $body-link-color;
+}
+
+.search-ending-icon {
+  color: $body-text-black-color;
+}
+
+.footer-row {
+  font-size: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover {
+      text-decoration: none;
+      color: $link-hover-color;
+      font-weight: bold;
+    }
+  }
+}
+
+.header-links {
+  height: 50%;
+}
+
+.header-links-hide {
+  display: none;
+  height: 0px;
+  // background-color: cyan;
+}
+
+.header-container {
+  background-color: white;
+  height: 15vh;
+  .row {
+    margin: 0;
+  }
+}
+
+.header-container-resize {
+  height: 15vh;
+  .row {
+    margin: 0;
+  }
+}
+
+.head-nav-link {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: $link-hover-color;
+    font-weight: bold;
+  }
+}
+
+.head-nav-link-container {
+  margin: 0.5rem 0;
+}
+
+.about-page {
+  font-family: "IBM Plex Serif", serif;
+  color: $body-text-color;
+  background-color: $default-background-color;
+}
+
+.search-input {
+  border-radius: 25px;
+  text-align: center;
+}
+
+.email-input {
+  border-radius: 25px;
+  text-align: center;
+}
+
+.content {
+  line-height: 3rem;
+}
+
+.head-image {
+  height: 300px;
+}
+
+.footer-page-nav-link {
+  width: calc(100% / 6);
+}
+
+.demo-area > * {
+  margin: 3rem 0;
+}
+
+.list-inline-item {
+  min-width: calc(80% / 6);
+}
+
+.search-box-container {
+  height: 50%;
+
+  #search-box {
+    width: 100%;
+  }
+}
+
+.search-box-container-resize {
+  height: 50%;
+
+  #search-box {
+    width: calc(100% - 20%);
+  }
+}
+
+.links-container {
+  height: 50%;
+}
+
+.links-container-resize {
+  height: 50%;
+
+  div {
+  }
+}
+
+.copyright-line {
+  background-color: white;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-company-logo {
+  height: 2rem;
+  width: 2rem;
+}
+
+.header-company-logo-resize {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (min-width: 576px) {
+  .header-company-logo-container {
+    height: 100%;
+  }
+
+  .header-company-logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .header-company-logo-resize {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .header-container {
+    background-color: white;
+    height: 15vh;
+  }
+
+  .header-container-resize {
+    height: calc(15vh / 2);
+  }
+
+  .search-box-container {
+    height: 50%;
+
+    #search-box {
+      width: 50%;
+    }
+  }
+
+  .search-box-container-resize {
+    height: 100%;
+
+    #search-box {
+      width: calc(50% - 20%);
+    }
+  }
+
+  .links-container {
+    height: 50%;
+  }
+
+  .links-container-resize {
+    height: 0%;
+
+    div {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-container {
+    // background-color: tomato;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header-container {
+    // background-color: green;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .header-container {
+    // background-color: cyan;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}

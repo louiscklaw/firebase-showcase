@@ -21,3 +21,8 @@ services:
       - "traefik.http.routers.showcase.entrypoints=websecure"
       - "traefik.http.routers.showcase.tls.certresolver=myresolver"
       - "traefik.http.services.showcase.loadbalancer.server.port=8080"
+
+networks:
+  default:
+    external:
+      name: traefik-proxy-network

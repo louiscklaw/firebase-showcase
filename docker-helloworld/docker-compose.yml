@@ -1,0 +1,17 @@
+# CREDIT: https://github.com/shren207/nextjs-docker-compose
+services:
+  test:
+    build: .
+    ports:
+      - 8080:8080
+    restart: always
+    volumes:
+      - $PWD/app:/app
+    working_dir: /app
+    # command: sleep infinity
+    command: bash entry.sh
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`portfolio.iamon99.com`)"
+      - "traefik.http.routers.whoami.entrypoints=websecure"
+      - "traefik.http.routers.whoami.tls.certresolver=myresolver"

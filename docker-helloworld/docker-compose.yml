@@ -20,4 +20,4 @@ services:
       - "traefik.http.routers.showcase.rule=Host(`showcase.iamon99.com`)"
       - "traefik.http.routers.showcase.entrypoints=websecure"
       - "traefik.http.routers.showcase.tls.certresolver=myresolver"
-      - "traefik.http.services.showcase.loadbalancer.server.port=3000"
+      - "traefik.http.services.showcase.loadbalancer.server.port=8080"

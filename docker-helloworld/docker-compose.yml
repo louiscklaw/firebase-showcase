@@ -13,6 +13,11 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`portfolio.iamon99.com`)"
-      - "traefik.http.routers.whoami.entrypoints=websecure"
-      - "traefik.http.routers.whoami.tls.certresolver=myresolver"
+      - "traefik.http.routers.showcase-http.rule=Host(`showcase.iamon99.com`)"
+      - "traefik.http.routers.showcase-http.entrypoints=web"
+      - "traefik.http.routers.showcase-http.middlewares=showcase-https"
+      - "traefik.http.middlewares.showcase-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.showcase.rule=Host(`showcase.iamon99.com`)"
+      - "traefik.http.routers.showcase.entrypoints=websecure"
+      - "traefik.http.routers.showcase.tls.certresolver=myresolver"
+      - "traefik.http.services.showcase.loadbalancer.server.port=3000"

@@ -13,14 +13,14 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.showcase-http.rule=Host(`showcase.iamon99.com`)"
-      - "traefik.http.routers.showcase-http.entrypoints=web"
-      - "traefik.http.routers.showcase-http.middlewares=showcase-https"
-      - "traefik.http.middlewares.showcase-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.showcase.rule=Host(`showcase.iamon99.com`)"
-      - "traefik.http.routers.showcase.entrypoints=websecure"
-      - "traefik.http.routers.showcase.tls.certresolver=myresolver"
-      - "traefik.http.services.showcase.loadbalancer.server.port=8080"
+      - "traefik.http.routers.showcase-iamon99-http.rule=Host(`showcase.iamon99.com`)"
+      - "traefik.http.routers.showcase-iamon99-http.entrypoints=web"
+      - "traefik.http.routers.showcase-iamon99-http.middlewares=showcase-iamon99-https"
+      - "traefik.http.middlewares.showcase-iamon99-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.showcase-iamon99-https.rule=Host(`showcase.iamon99.com`)"
+      - "traefik.http.routers.showcase-iamon99-https.entrypoints=websecure"
+      - "traefik.http.routers.showcase-iamon99-https.tls.certresolver=myresolver"
+      - "traefik.http.services.showcase-iamon99-https.loadbalancer.server.port=8080"
 
   test-louislabs:
     build: .

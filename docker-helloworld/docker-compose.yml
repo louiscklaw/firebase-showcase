@@ -35,14 +35,14 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.showcase-http.rule=Host(`showcase.louislabs.com`)"
-      - "traefik.http.routers.showcase-http.entrypoints=web"
-      - "traefik.http.routers.showcase-http.middlewares=showcase-https"
-      - "traefik.http.middlewares.showcase-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.showcase.rule=Host(`showcase.louislabs.com`)"
-      - "traefik.http.routers.showcase.entrypoints=websecure"
-      - "traefik.http.routers.showcase.tls.certresolver=myresolver"
-      - "traefik.http.services.showcase.loadbalancer.server.port=8080"
+      - "traefik.http.routers.showcase-louislabs-http.rule=Host(`showcase.louislabs.com`)"
+      - "traefik.http.routers.showcase-louislabs-http.entrypoints=web"
+      - "traefik.http.routers.showcase-louislabs-http.middlewares=showcase-louislabs-https"
+      - "traefik.http.middlewares.showcase-louislabs-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.showcase-louislabs-https.rule=Host(`showcase.louislabs.com`)"
+      - "traefik.http.routers.showcase-louislabs-https.entrypoints=websecure"
+      - "traefik.http.routers.showcase-louislabs-https.tls.certresolver=myresolver"
+      - "traefik.http.services.showcase-louislabs-https.loadbalancer.server.port=8080"
 
 networks:
   default:

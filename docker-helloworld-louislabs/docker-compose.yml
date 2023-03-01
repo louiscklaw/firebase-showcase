@@ -16,7 +16,7 @@ services:
       - "traefik.http.routers.showcase-louislabs-https.rule=Host(`showcase.louislabs.com`)"
       - "traefik.http.routers.showcase-louislabs-https.entrypoints=websecure"
       - "traefik.http.routers.showcase-louislabs-https.tls.certresolver=myresolver"
-      - "traefik.http.services.showcase-louislabs-https.loadbalancer.server.port=8787"
+      - "traefik.http.services.showcase-louislabs-https.loadbalancer.server.port=80"
 
 networks:
   default:

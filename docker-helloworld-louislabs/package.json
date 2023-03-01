@@ -1,0 +1,13 @@
+{
+  "name": "docker-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "into_docker": "docker compose exec -it test bash"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

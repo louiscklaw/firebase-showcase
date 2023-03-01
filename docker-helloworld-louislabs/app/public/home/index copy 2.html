@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .masonary-container {
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+      }
+
+      .spacer {
+        height: calc((200px + 5px) * 4);
+        min-height: calc(1000px + 10px);
+        background-color: gold;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* ---- grid ---- */
+
+      .grid {
+        background: #ddd;
+        height: calc((200px + 1px) * 4);
+      }
+
+      /* clear fix */
+      .grid:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      /* ---- .grid-item ---- */
+
+      .grid-item {
+        float: left;
+        /* width: calc((100vw - 100px) / 8); */
+        width: 200px;
+        height: 200px;
+        background: #0d8;
+        border: 2px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.7);
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      .grid-item--width2 {
+        width: calc(((100vw - 100px) / 8) * 2);
+      }
+      .grid-item--height2 {
+        height: calc((200px * 2));
+      }
+    </style>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- masonry -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="//npmcdn.com/isotope-masonry-horizontal@2/masonry-horizontal.js"></script>
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="masonary-container">
+      <div class="grid">
+        <div class="grid-item grid-item--height2">title? 500px</div>
+        <div class="grid-item">1 200px</div>
+        <div class="grid-item">2 200px</div>
+        <div class="grid-item">3 200px</div>
+        <div class="grid-item">4 200px</div>
+        <div class="grid-item">5 200px</div>
+        <div class="grid-item">6 200px</div>
+        <div class="grid-item">7 200px</div>
+        <div class="grid-item">8 200px</div>
+        <div class="grid-item">9 200px</div>
+        <div class="grid-item">10 200px</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+        <div class="grid-item">16</div>
+        <div class="grid-item">17</div>
+
+        <div class="grid-item">18</div>
+        <div class="grid-item">19</div>
+        <div class="grid-item">20</div>
+        <div class="grid-item">21</div>
+        <div class="grid-item">22</div>
+        <div class="grid-item">23</div>
+        <div class="grid-item">24</div>
+        <div class="grid-item">25</div>
+        <div class="grid-item">26</div>
+        <div class="grid-item">27</div>
+        <div class="grid-item">28</div>
+        <div class="grid-item">29</div>
+        <div class="grid-item">30</div>
+      </div>
+    </div>
+
+    <div style="background-color: white">
+      <div
+        class="py-5"
+        style="
+          padding-top: 5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+        "
+      >
+        <div class="mx-3" style="text-align: center; letter-spacing: 4px">
+          47,124,359 DOWNLOADS & COUNTING - 6061 GRAPHICS ♡ 臺四即文善公作
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem">
+          <div>Never miss another freebie, subscribe below :)</div>
+          <div>
+            <input
+              type="text"
+              class="form-control email-input"
+              placeholder="Your email address"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <div class="mx-5" style="display: flex; flex-direction: column; align-items: center; gap: 1rem">
+          <div class="row footer-row" style="width: 100%">
+            <!-- <div class="col-xs-12" style="display: flex; justify-content: center; gap: 1rem"> -->
+            <div class="row">
+              <div class="col-6 col-md-2"><a href="#">About</a></div>
+              <div class="col-6 col-md-2"><a href="#">Submit</a></div>
+              <div class="col-6 col-md-2"><a href="#">License</a></div>
+              <div class="col-6 col-md-2"><a href="#">進變果沒致</a></div>
+              <div class="col-6 col-md-2"><a href="#">Privacy Policy</a></div>
+              <div class="col-6 col-md-2"><a href="#">Contact</a></div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="row footer-row justify-content-center">
+            <div class="col-3 col-md-2 my-3"><a href="#">Photoshop Graphics </a></div>
+            <div class="col-3 col-md-2 my-3"><a href="#">Photoshop Mockups</a></div>
+            <div class="col-3 col-md-2 my-3"><a href="#">Vector Graphics</a></div>
+            <div class="col-3 col-md-2 my-3"><a href="#">Sketch Resources</a></div>
+            <div class="col-3 col-md-2 my-3"><a href="#">臺四即文善公</a></div>
+            <div class="col-3 col-md-2 my-3"><a href="#">Design Articles</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-line">© 2023 Unblast. All rights reserved.</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="scripts.js"></script>
+
+    <script>
+      // external js: isotope.pkgd.js, masonry-horizontal.js
+
+      $(".grid").isotope({
+        layoutMode: "masonryHorizontal",
+        itemSelector: ".grid-item",
+        masonryHorizontal: {
+          rowHeight: 200 + 1,
+        },
+      });
+    </script>
+  </body>
+</html>

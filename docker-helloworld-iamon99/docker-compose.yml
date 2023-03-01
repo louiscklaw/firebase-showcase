@@ -22,28 +22,6 @@ services:
       - "traefik.http.routers.showcase-iamon99-https.tls.certresolver=myresolver"
       - "traefik.http.services.showcase-iamon99-https.loadbalancer.server.port=8080"
 
-  test-louislabs:
-    build: .
-    # ports:
-    #   - 8080:8080
-    restart: always
-    volumes:
-      - $PWD/app:/app
-    working_dir: /app
-    # command: sleep infinity
-    command: bash entry.sh
-
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.showcase-louislabs-http.rule=Host(`showcase.louislabs.com`)"
-      - "traefik.http.routers.showcase-louislabs-http.entrypoints=web"
-      - "traefik.http.routers.showcase-louislabs-http.middlewares=showcase-louislabs-https"
-      - "traefik.http.middlewares.showcase-louislabs-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.showcase-louislabs-https.rule=Host(`showcase.louislabs.com`)"
-      - "traefik.http.routers.showcase-louislabs-https.entrypoints=websecure"
-      - "traefik.http.routers.showcase-louislabs-https.tls.certresolver=myresolver"
-      - "traefik.http.services.showcase-louislabs-https.loadbalancer.server.port=8080"
-
 networks:
   default:
     external:

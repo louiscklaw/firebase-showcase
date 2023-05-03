@@ -8,8 +8,7 @@
   },
   "scripts": {
     "publish": "node ./publish.js",
-    "gitUpdate": "git add . && git commit -m'update,' && git push",
-    "test": "concurrently 'npm run gitUpdate' 'npm run publish'"
+    "gitUpdate": "git add . && git commit -m'update firebase-showcase,' && git push"
   },
   "repository": {
     "type": "git",
